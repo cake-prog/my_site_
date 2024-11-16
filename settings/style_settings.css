@@ -1,0 +1,201 @@
+*{
+    margin: 0px;
+    padding: opx;
+}
+
+body {
+    font-family: "Dancing Script", cursive;
+
+}
+
+
+.ikons_settings{
+    font-family: "Dancing Script", cursive;
+    display: flex;
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    width: 160px;
+    font-size: 30px;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 325px;
+
+}
+.ikons_beg{
+    font-family: "Dancing Script", cursive;
+    display: flex;
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    width: 160px;
+    font-size: 30px;
+    flex-direction: row;
+}
+
+.left_sidebar>p:hover{
+    background-color: rgb(179, 179,179);
+}
+
+.left_sidebar>a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;
+}
+.left_sidebar>a:hover{
+    background-color: rgb(179, 179,179);
+}
+
+.main_content{
+    margin-top: 10%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    width: 1450px;
+    height: 500px;
+}
+
+.settings>ul{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 0px;
+    width: 1178px;
+}
+
+.settings>ul>li{
+    display: flex;
+    text-decoration: none;
+}
+.password{
+    display: flex;
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 1160px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.email{
+    border: 2px solid black; 
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 1160px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.tema{
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    width: 1160px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+/*ПАРОЛЬ*/
+.password>div>p{
+    display: flex;
+    flex-direction: row;
+}
+.password_form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px
+}
+
+.main_password{
+    display: flex;
+    flex-direction: row;
+}
+
+.old_password{
+    margin-top: 10px;
+}
+.new_password{
+    margin-top: 10px;
+}
+
+.return_new_password{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.old_password>.search{
+    border: 2px solid black;
+    width: 400px;
+    height: 30px;
+}
+.new_password>.search{
+    border: 2px solid black;
+    width: 400px;
+    height: 30px;
+}
+.return_new_password>.search{
+    border: 2px solid black;
+    width: 400px;
+    height: 30px;
+}
+/*/ПАРОЛЬ*/
+
+/*EMAIL*/
+.email>div>p{
+    display: flex;
+    flex-direction: row;
+}
+.email_form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px
+}
+
+.main_email{
+    display: flex;
+    flex-direction: row;
+}
+
+.new_email{
+    margin-top: 10px;
+}
+.cod{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.new_email>.search{
+    border: 2px solid black;
+    width: 400px;
+    height: 30px;
+}
+.cod>.search{
+    border: 2px solid black;
+    width: 400px;
+    height: 30px;
+}
+/*ТЕМА*/
+
+.smen_tema{
+    display:flex;
+    flex-direction: row;
+}
+
+.smen_tema>p{
+    display: flex;
+}
+
+#option_smen_tema{
+    display: flex;
+    margin-left: 40px;
+}
+
+/*ВЫЙТИ*/
+

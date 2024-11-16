@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Dancing Script", cursive;
+
+}
+
+/*HEADER*/
+.header {
+    margin-left: 190px;
+    margin-right: 190px;
+    margin-top: 5px;
+    display: flex;
+    width: 80%;
+    height: 100px;
+    border: 2px solid black
+}
+
+.regist_main_logo {
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.header>a {
+    text-decoration: none;
+    color: black;
+}
+
+.regist_icon {
+    margin-left: 1220px;
+}
+
+.regist_icon>a>p {
+    border: 2px solid black;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    margin-top: 20px;
+    color: black;
+}
+
+.regist_icon>a {
+    text-decoration: none;
+}
+
+.regist_icon>a>p:hover {
+    background-color: rgb(179, 179, 179);
+}
+
+/*/HEADER*/
+
+
+.entrance {
+    display: flex;
+    border: 2px solid black;
+    margin-left: 190px;
+    margin-right: 175px;
+    margin-top: 5px;
+}
+
+.entrance>div {
+    flex-direction: column;
+    border: 2px solid black;
+    display: flex;
+    margin-top: 250px;
+
+    margin-left: 500px;
+    margin-bottom: 360px;
+}
+
+.vhod {
+    
+    display: flex;
+    font-size: 25px;
+    margin-left: 44%;
+    margin-top: 5px;
+}
+
+.email {
+    display: flex;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.email > .search{
+    margin-left: 160px;
+}
+
+.password {
+    display: flex;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.zab_password {
+    font-family: "Dancing Script", cursive;
+    display: flex;
+    font-size: 25px;
+    margin-left: 28%;
+    margin-right: 30%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.password>input {
+    margin-left: 10px;
+    border: 2px solid black;
+}
+
+.email>input{
+    margin-left: 10px;
+    border: 2px solid black;
+}
+
+.password>.search{
+    margin-left: 123px;
+    margin-right: 20px;
+}
+
+.zab_password{
+    padding-left: 15px;
+    border: 2px solid black;
+    padding-right: 7px;
+    width: 187px;
+}
+
+.entrance>div>a{
+    text-decoration: none;
+    color: black;
+}
+
+.zab_password:hover{
+    background-color: rgb(179, 179, 179);
+}
+
+.bottom_vhod{
+    font-family: "Dancing Script", cursive;
+    padding-left: 45px;
+    padding-right: 20px;
+    border: 2px solid black;
+    width: 150px;
+    font-size: 25px;
+    display: flex;
+    margin-left: 138px;
+    margin-bottom: 20px;
+}
+
+.bottom_vhod:hover{
+    background-color: rgb(179, 179, 179);
+}
+
+.msg{
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+    font-size: 20px;
+}
