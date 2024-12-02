@@ -1,5 +1,8 @@
 <?php
+
+//вход
 session_start();
+
 ?>
 
 

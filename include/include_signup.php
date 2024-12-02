@@ -11,7 +11,11 @@ $password_return = $_POST['password_return'];
 
 if($password === $password_return){
     $password = md5($password);
-    mysqli_query($connect_user , "INSERT INTO `user` (`id`, `nick`, `email`, `password`) VALUES (NULL, '$nick', '$email', '$password')");
+
+    $sql = "INSERT INTO `user` (`id`, `nick`, `email`, `password`) VALUES (NULL, '$nick', '$email', '$password')"; //команда на добавления значения $main_foto в столбец main_foto таблицы main_foto
+     
+    $affectedRowsNumber = $pdo->exec($sql);
+
 
     $_SESSION['message'] = 'Регистрация прошла успешно!';
     header('Location: ../signin/signin.php');

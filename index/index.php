@@ -1,10 +1,13 @@
 <?php
 session_start();
+
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
+
 
 <head>
     <meta charset="UTF-8">
@@ -26,8 +29,8 @@ session_start();
         <img class="noti_logo" src="../img/уведомления.png" alt="notifications">
 
         <div class="header_user">
-            <a href="#">
-                <p><?php $_SESSION['user']['nick'] ?></p>
+            <a href="#" >
+                <p><?= $_SESSION['user']['nick']?></p>
             </a>
             <a href="#">
                 <img class="user_logo" src="../img/user_picturs/not_foto.png" alt="фото пользователя">
@@ -57,11 +60,25 @@ session_start();
         <div class="sidebar">
             <div class="sidebar_right1">
                 <div class= 'function_picturs'>
-                    <form action="../include/main_foto.php" method= "POST" enctype="multipart/form-data" >
-                    <div class='button_download_picturs'><a href="#"><img src="../img/download.jpg" alt=""></a></div>
+
+
+
+                    <form action="../include/main_foto.php" method= "POST" enctype="multipart/form-data" > 
+
+                    <input type="file" name="main_foto" id="fileToUpload">
+                    <input type="submit" value="Upload Image" name="submit">
+                    
+                   <!-- <div class='button_download_picturs'><a href="#"><img src="../img/download.jpg" alt=""></a></div> -->
+                    
+
                     </form>
                    
-                    <div class='main_pictur'><img class="sidebar_right_img_user" src="../img/user_picturs/not_foto.png" alt="фото пользователя"></div>
+
+
+                    <div class='main_pictur'><img class="sidebar_right_img_user" src="../img/user_picturs/not_foto.png" alt="фото пользователя"></div> 
+
+                    
+
                 </div>
                 
                 <ul class="ul_sidebar_num2">

@@ -15,6 +15,7 @@
         <div class="left_sidebar">
             <p class="ikons_settings">Настройки</p>
             <a href="../signin/signin.php"><p class="ikons_beg">Выйти</p></a>
+           
         </div>
         <div class="settings">
             <ul>
