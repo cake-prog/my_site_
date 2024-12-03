@@ -15,7 +15,7 @@ $options = [
     \PDO::ATTR_EMULATE_PREPARES   => false,
 ];
 
-$dsn = "mysql:host=$host;dbname=$db; charset=$charset; port=$port";
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset;port=$port";
 $pdo = new \PDO($dsn, $user, $pass, $options);
 //$connect_user = mysqli_connect('localhost', 'root', '', 'site');
 
