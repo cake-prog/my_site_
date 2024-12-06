@@ -83,8 +83,13 @@ body {
     width: 300px;
 }
 
-.header_user>a>p {
+.user_nick{
     margin-top: 40px;
+    font-size: 20px;
+    margin-left: 35px;
+    width: 180px;
+}
+.user_id{
     font-size: 20px;
     margin-left: 35px;
     width: 180px;
@@ -170,6 +175,21 @@ ul>a {
 
 /*/SIDEBAR*/
 /*CONTENT*/
+.main_foto_border{
+    margin-top: 5px;
+    margin-left: 5px;
+    border: 2px solid black;
+    display: flex;
+    overflow: hidden;
+}
+.main_foto{
+    width: 340px;
+    height: 275px;
+}
+
+
+
+
 .sidebar_right1 {
     display: flex;
 }

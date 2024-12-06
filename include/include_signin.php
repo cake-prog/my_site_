@@ -21,7 +21,8 @@ if ($count > 0){
 $_SESSION['user'] = [
         "id" => $user['id'],
        "nick" => $user['nick'],
-       "email" => $user['email']
+       "email" => $user['email'],
+       "main_foto" => $user['main_foto']
     ];
     header('Location: ../index/index.php');
    }

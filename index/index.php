@@ -6,9 +6,6 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
-
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +27,8 @@ session_start();
 
         <div class="header_user">
             <a href="#" >
-                <p><?= $_SESSION['user']['nick']?></p>
+                <p class='user_nick' ><?= $_SESSION['user']['nick']?></p>
+                <p class='user_id' >id = <?= $_SESSION['user']['id']?></p>
             </a>
             <a href="#">
                 <img class="user_logo" src="../img/user_picturs/not_foto.png" alt="фото пользователя">
@@ -62,25 +60,24 @@ session_start();
                 <div class= 'function_picturs'>
 
 
-
+                     
                     <form action="../include/main_foto.php" method= "POST" enctype="multipart/form-data" > 
 
                     <input type="file" name="main_foto" id="fileToUpload">
                     <input type="submit" value="Upload Image" name="submit">
-                    
                    <!-- <div class='button_download_picturs'><a href="#"><img src="../img/download.jpg" alt=""></a></div> -->
-                    
-
                     </form>
-                   
 
+                     <div class='main_foto_border'><img class='main_foto' src="<?php 
+                     session_reset();
+                     echo '../image/' . $_SESSION['user']['main_foto'] . '.jpeg' ?>" alt=""></div>
 
-                    <div class='main_pictur'><img class="sidebar_right_img_user" src="../img/user_picturs/not_foto.png" alt="фото пользователя"></div> 
-
-                    
-
-                </div>
+                    <p><?php echo '../image/' . $_SESSION['user']['main_foto'] . '.jpeg'?></p>
                 
+                    </div>
+                
+
+
                 <ul class="ul_sidebar_num2">
                     <li class="sidebar_num2">nickname: <?= $_SESSION['user']['nick']?></li>
                     <li class="sidebar_num2">Дата рождения: 25.12.2004</li>
