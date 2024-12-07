@@ -33,7 +33,7 @@ session_start();
             <a href="#">
             <img class="user_logo" src="<?php 
                      session_reset();
-                     echo '../image/' . $_SESSION['user']['main_foto'] . '.jpeg' ?>" alt="фото пользователя">
+                     echo '../' . $_SESSION['user']['main_foto'] . '.jpeg' ?>" alt="фото пользователя">
             </a>
         </div>
     </div>
@@ -72,9 +72,9 @@ session_start();
 
                      <div class='main_foto_border'><img class='main_foto' src="<?php 
                      session_reset();
-                     echo '../image/' . $_SESSION['user']['main_foto'] . '.jpeg' ?>" alt=""></div>
+                     echo '../' . $_SESSION['user']['main_foto'] . '.jpeg' ?>" alt=""></div>
 
-                    <p><?php echo '../image/' . $_SESSION['user']['main_foto'] . '.jpeg'?></p>
+                    <p><?php echo '../' . $_SESSION['user']['main_foto'] . '.jpeg'?></p>
                 
                     </div>
                 
