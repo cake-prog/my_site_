@@ -31,7 +31,9 @@ session_start();
                 <p class='user_id' >id = <?= $_SESSION['user']['id']?></p>
             </a>
             <a href="#">
-                <img class="user_logo" src="../img/user_picturs/not_foto.png" alt="фото пользователя">
+            <img class="user_logo" src="<?php 
+                     session_reset();
+                     echo '../image/' . $_SESSION['user']['main_foto'] . '.jpeg' ?>" alt="фото пользователя">
             </a>
         </div>
     </div>
