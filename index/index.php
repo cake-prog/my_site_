@@ -61,22 +61,31 @@ session_start();
             <div class="sidebar_right1">
                 <div class= 'function_picturs'>
 
-
+                <div class='main_foto_border'><img class='main_foto' src="<?php 
+                     session_reset();
+                     echo '../' . $_SESSION['user']['main_foto'] . '.jpeg' ?>" alt=""></div>
                      
                     <form action="../include/main_foto.php" method= "POST" enctype="multipart/form-data" > 
 
-                    <input type="file" name="main_foto" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit">
+                    <div class='button_download_picturs'>
+                    <input type="file"  name="main_foto"  id="fileToUpload">
+                    <label for="fileToUpload" class="input_file">
+                        
+                     <img class="img_downloads" src="../img/download.jpg" alt="">
+                    </label>
+
+                    <input type="submit" value="save" name="submit" class="save_img_download">
+                    </div>
+
+                    
                    <!-- <div class='button_download_picturs'><a href="#"><img src="../img/download.jpg" alt=""></a></div> -->
                     </form>
 
-                     <div class='main_foto_border'><img class='main_foto' src="<?php 
-                     session_reset();
-                     echo '../' . $_SESSION['user']['main_foto'] . '.jpeg' ?>" alt=""></div>
+                     
 
-                    <p><?php echo '../' . $_SESSION['user']['main_foto'] . '.jpeg'?></p>
+
                 
-                    </div>
+                </div>
                 
 
 
@@ -111,11 +120,12 @@ session_start();
                 </div>
             </div>
             <div class="picturs">
-                <img class="pic1" src="../img/user_picturs/pic1.jpg" alt="">
-                <img class="pic2" src="../img/user_picturs/pic2.jpg" alt="">
-                <img class="pic3" src="../img/user_picturs/pic3.jpg" alt="">
-                <img class="pic4" src="../img/user_picturs/pic4.jpg" alt="">
-                <img class="pic5" src="../img/user_picturs/pic5.jpg" alt="">
+                <img class="pic1" src="" alt="">
+                <img class="pic2" src="" alt="">
+                <img class="pic3" src="" alt="">
+                <img class="pic4" src="" alt="">
+                <img class="pic5" src="" alt="">
+                <img class="pic5" src="" alt="">
             </div>
         </div>
     </div>
