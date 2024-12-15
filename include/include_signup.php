@@ -12,7 +12,7 @@ $password_return = $_POST['password_return'];
 if($password === $password_return){
     $password = md5($password);
 
-    $sql = "INSERT INTO `user` (`id`, `nick`, `email`, `password`) VALUES (NULL, '$nick', '$email', '$password')"; //команда на добавления значения $main_foto в столбец main_foto таблицы main_foto
+    $sql = "INSERT INTO `users` (`id`, `nick`, `email`, `password`) VALUES (NULL, '$nick', '$email', '$password')"; 
      
     $affectedRowsNumber = $pdo->exec($sql);
 

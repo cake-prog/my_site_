@@ -7,14 +7,14 @@ require_once 'connect.php';
 if(isset($_FILES['main_foto'])){
 
 $main_foto = $_FILES["main_foto"];
-$user_id = $_SESSION['user']['id'];
+$user_id = $_COOKIE['id'];
 
 try {
     $path = 'image/' . $_FILES["main_foto"]["name"];
      move_uploaded_file($_FILES["main_foto"]["tmp_name"], '../' . $path . '.jpeg');
-     $sql = "UPDATE `user` SET `main_foto` = '$path' where `id` = '$user_id'"; //команда на добавления значения $main_foto в столбец main_foto таблицы main_foto
+     $sql = "UPDATE `users` SET `main_foto` = '$path' where `id` = '$user_id'"; 
      $affectedRowsNumber = $pdo->exec($sql);
-     $_SESSION["user"]["main_foto"] = 'image/' . $_FILES["main_foto"]["name"];//обновление session при каждом нажатие кнопки 
+     $_COOKIE["main_foto"] = 'image/' . $_FILES["main_foto"]["name"];
      
      header('Location: ../index/index.php');
 

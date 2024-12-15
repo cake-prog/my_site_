@@ -8,6 +8,17 @@ body {
 
 }
 
+div.select_city{
+    margin-right: 10px;
+
+}
+
+
+
+.change_city{
+    margin-left: 270px;
+}
+
 /*ШАПКА*/
 .header {
     margin-left: 10%;

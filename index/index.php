@@ -27,13 +27,14 @@ session_start();
 
         <div class="header_user">
             <a href="#" >
-                <p class='user_nick' ><?= $_SESSION['user']['nick']?></p>
-                <p class='user_id' >id = <?= $_SESSION['user']['id']?></p>
+                <p class='user_nick' >
+                    <?php $_COOKIE['nick']?>
+                </p>
+                <p class='user_id' >id = <?= $_COOKIE['id']?></p>
             </a>
             <a href="#">
             <img class="user_logo" src="<?php 
-                     session_reset();
-                     echo '../' . $_SESSION['user']['main_foto'] . '.jpeg' ?>" alt="фото пользователя">
+                     echo '../' . $_COOKIE['main_foto'] . '.jpeg' ?>" alt="фото пользователя">
             </a>
         </div>
     </div>
@@ -62,8 +63,7 @@ session_start();
                 <div class= 'function_picturs'>
 
                 <div class='main_foto_border'><img class='main_foto' src="<?php 
-                     session_reset();
-                     echo '../' . $_SESSION['user']['main_foto'] . '.jpeg' ?>" alt=""></div>
+                     echo '../' . $_COOKIE['main_foto'] . '.jpeg' ?>" alt=""></div>
                      
                     <form action="../include/main_foto.php" method= "POST" enctype="multipart/form-data" > 
 
@@ -90,10 +90,28 @@ session_start();
 
 
                 <ul class="ul_sidebar_num2">
-                    <li class="sidebar_num2">nickname: <?= $_SESSION['user']['nick']?></li>
+                    <li class="sidebar_num2">nickname: <?= $_COOKIE["nick"]?></li>
                     <li class="sidebar_num2">Дата рождения: 25.12.2004</li>
-                    <li class="sidebar_num2">Город: Санкт-Петербург</li>
-                    <li class="sidebar_num2">email: <?= $_SESSION['user']['email']?></li>
+                    <li class="sidebar_num2">
+
+                    <div class="cookie_city"><?=$_COOKIE["city"];?></div>
+
+                    <div class="select_city">
+                    <form action="../include/include_city.php" method= "POST"> 
+                    <label for="city" class="change_city">Измените город:</label>
+                        <select name="city" id="city-select">
+                        <option>-- Выберите город --</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Самара</option>
+                        <option>Пермь</option>
+                        <optionНовосибирск</option>
+                        </select>
+                        <input type="submit" value="save" />
+                    </form>
+                    </div>
+                        
+                    </li>
+                    <li class="sidebar_num2">email: <?= $_COOKIE["email"]?></li>
                     <li class="sidebar_num2">Статус: :)</li>
                     <li class="sidebar_num2">Темная: темная</li>
                 </ul>
