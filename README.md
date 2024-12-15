@@ -7,7 +7,8 @@ sample layout of the main page:
 ![изображение](https://github.com/user-attachments/assets/d3b24183-9279-41f8-acfb-d42d8f2e0cd9)
 ![изображение](https://github.com/user-attachments/assets/c0eaa965-9f39-48df-8ba1-6d50fe6cdadc)
 last update:
-![изображение](https://github.com/user-attachments/assets/5e1a6536-876a-4fe2-b594-a4efc8107a59)
-allows you to upload an avatar
+![изображение](https://github.com/user-attachments/assets/08495480-0409-4c8e-baa0-566b2b0bfe3c)
+
+allows you to upload an avatar and city
 
 
