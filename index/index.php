@@ -63,6 +63,7 @@ session_start();
                 <div class= 'function_picturs'>
 
                 <div class='main_foto_border'><img class='main_foto' src="<?php 
+                
                      echo '../' . $_COOKIE['main_foto'] . '.jpeg' ?>" alt=""></div>
                      
                     <form action="../include/main_foto.php" method= "POST" enctype="multipart/form-data" > 
@@ -112,7 +113,16 @@ session_start();
                         
                     </li>
                     <li class="sidebar_num2">email: <?= $_COOKIE["email"]?></li>
-                    <li class="sidebar_num2">Статус: :)</li>
+                    <li class="sidebar_num2">
+                        <form action="../include/status.php" method= "POST">
+
+                        <input type="text"  value="status" placeholder="статус">
+                        <input type="submit" value="save" />
+
+
+                        <?php $_COOKIE["status"];?>
+                        </form>
+                    </li>
                     <li class="sidebar_num2">Темная: темная</li>
                 </ul>
             </div>

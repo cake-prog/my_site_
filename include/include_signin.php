@@ -5,13 +5,19 @@ session_start();
 require_once 'connect.php';
 
 $email = $_POST['email'];
-$password = md5($_POST['password']);
+$password_vhod = $_POST['password'];
 
 
-$from = "FROM `users` WHERE `email` = '$email' AND `password` = '$password'";
+$hash = $_COOKIE['hash'];
+
+if (password_verify($password_vhod, $hash)){
+
+$from = "FROM `users` WHERE `email` = '$email' AND `password` = '$hash'";
 
 $count = $pdo->query("SELECT count(*) $from")->fetchColumn();
 $string = $pdo->query("SELECT * $from");
+
+var_dump($string);
 
 if ($count > 0){
      
@@ -22,19 +28,14 @@ if ($count > 0){
     setcookie("email", $user['email'], strtotime("+30 days"), '/');
     setcookie("main_foto", $user['main_foto'], strtotime("+30 days"), '/');
     setcookie("city", $user['city'], strtotime("+30 days"), '/');
+    setcookie("status", $user['status'], strtotime("+30 days"), '/');
 
-/*
 $_SESSION['users'] = [
-        "id" => $user['id'],
-       "nick" => $user['nick'],
-       "email" => $user['email'],
-       "main_foto" => $user['main_foto'],
-       "city" => $user['city']
-    ];*/
+       "city" => $user['status']
+    ];
     header('Location: ../index/index.php');
    }
-else {
+}else {
     $_SESSION['message'] = 'Не верный логин или пароль';
     header('Location: ../signin/signin.php');
 }?>
-

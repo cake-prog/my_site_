@@ -18,7 +18,7 @@ session_start();
 <body>
     <div class="main_content">
         <div class="left_sidebar">
-            <p class="ikons_settings"><a href="../index/index.php">Назад</a></p>
+            <p class="ikons_settings"><a href="../index/index.php" class="back_include">Назад</a></p>
             <a href="../signin/signin.php"><p class="ikons_beg">Выйти</p></a>
            
         </div>

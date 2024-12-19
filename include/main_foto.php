@@ -15,7 +15,7 @@ try {
      $sql = "UPDATE `users` SET `main_foto` = '$path' where `id` = '$user_id'"; 
      $affectedRowsNumber = $pdo->exec($sql);
      $_COOKIE["main_foto"] = 'image/' . $_FILES["main_foto"]["name"];
-     
+
      header('Location: ../index/index.php');
 
     
