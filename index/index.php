@@ -95,7 +95,7 @@ session_start();
                     <li class="sidebar_num2">Дата рождения: 25.12.2004</li>
                     <li class="sidebar_num2">
 
-                    <div class="cookie_city"><?=$_COOKIE["city"];?></div>
+                    <div class="cookie_city"><?=$_SESSION["user"]["city"];?></div>
 
                     <div class="select_city">
                     <form action="../include/include_city.php" method= "POST"> 
