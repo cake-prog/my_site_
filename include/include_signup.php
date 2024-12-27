@@ -12,14 +12,10 @@ $password_return = $_POST['password_return'];
 $hash = password_hash($password, PASSWORD_DEFAULT);
 
 
-setcookie("hash_cookie", $hash, strtotime("+30 days"), '/');//- алгоритм bcrypt
-//var_dump($_COOKIE["hash_cookie"]);
-
-if(isset($_COOKIE["hash_cookie"])){
     if($password === $password_return){
 
     
-        $hash = $_COOKIE['hash'];
+        $hash = $_COOKIE['hash_cookie'];
         
         
          $sql = "INSERT INTO `users` (`id`, `nick`, `email`, `password`) VALUES (NULL, '$nick', '$email', '$hash')"; 
@@ -35,9 +31,6 @@ if(isset($_COOKIE["hash_cookie"])){
         $_SESSION['message'] = 'Пароли не совпадают';
         header('Location: ../registration/signup.php');
      }
-} else{
-    $_SESSION['message'] = 'Регистрация прошла успешно!';
-    header('Location: ../signin/signin.php');
-}
+
 
 

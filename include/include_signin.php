@@ -8,16 +8,21 @@ $email = $_POST['email'];
 $password_vhod = $_POST['password'];
 
 
-$hash = $_COOKIE['hash'];
 
-if (password_verify($password_vhod, $hash)){
+$count = $pdo->query("SELECT `password` FROM `users` WHERE `email` = '$email'")->fetchColumn();
 
-$from = "FROM `users` WHERE `email` = '$email' AND `password` = '$hash'";
+
+setcookie("hash", $password_vhod, strtotime("+30 days"), '/');
+
+$hash_cookie = $_COOKIE['hash_cookie'];
+
+
+if (password_verify($password_vhod, $count)){
+
+$from = "FROM `users` WHERE `email` = '$email' AND `password` = '$count'";
 
 $count = $pdo->query("SELECT count(*) $from")->fetchColumn();
 $string = $pdo->query("SELECT * $from");
-
-var_dump($string);
 
 if ($count > 0){
      
@@ -38,4 +43,6 @@ $_SESSION['users'] = [
 }else {
     $_SESSION['message'] = 'Не верный логин или пароль';
     header('Location: ../signin/signin.php');
-}?>
+}
+
+?>
